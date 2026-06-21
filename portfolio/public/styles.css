@@ -1,0 +1,238 @@
+:root {
+    --bg-dark: #0B0F19;
+    --card-bg: rgba(20, 27, 45, 0.65);
+    --border: rgba(255, 255, 255, 0.08);
+    --primary: #4F46E5;
+    --primary-glow: #06B6D4;
+    --text-main: #F3F4F6;
+    --text-muted: #9CA3AF;
+}
+
+body {
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Background elements */
+.background-decor {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    z-index: -1;
+    opacity: 0.15;
+}
+.blur-1 {
+    width: 400px;
+    height: 400px;
+    background: var(--primary);
+    top: -50px;
+    right: -50px;
+}
+.blur-2 {
+    width: 350px;
+    height: 350px;
+    background: var(--primary-glow);
+    bottom: -100px;
+    left: -100px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(11, 15, 25, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #a5b4fc, #22d3ee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 9999px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn.primary {
+    background: linear-gradient(135deg, var(--primary), #6366f1);
+    color: white;
+    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
+}
+
+.btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.6);
+}
+
+.btn.large {
+    padding: 15px 35px;
+    font-size: 1.1rem;
+}
+
+.intro-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #fff, #9ca3af);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    max-width: 800px;
+}
+
+.quick-links {
+    display: flex;
+    gap: 20px;
+}
+
+.quick-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    padding: 15px 25px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s ease;
+    flex: 1;
+}
+
+.quick-link:hover {
+    background: rgba(255,255,255,0.05);
+    border-color: var(--primary-glow);
+    transform: translateY(-2px);
+}
+
+.quick-link .icon {
+    font-size: 2rem;
+}
+
+.quick-link div {
+    display: flex;
+    flex-direction: column;
+}
+
+.quick-link strong {
+    font-size: 1rem;
+}
+
+.quick-link span {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.tabs-header {
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    padding: 15px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.tab-btn:hover {
+    color: white;
+}
+
+.tab-btn.active {
+    color: white;
+    font-weight: 500;
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary), var(--primary-glow));
+}
+
+.tab-content {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    min-height: 400px;
+}
+
+.hidden {
+    display: none;
+}
+
+.content-body h1, .content-body h2, .content-body h3 {
+    margin-top: 30px;
+    color: white;
+}
+
+.content-body p, .content-body li {
+    color: #D1D5DB;
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+}
+
+.content-body ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.content-body li {
+    margin-bottom: 8px;
+}
